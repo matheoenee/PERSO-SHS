@@ -34,7 +34,8 @@ void sha1(const char *file_path, uint8_t hash[20]) {
     fseek(file, 0, SEEK_SET);  // Return to the start of the file
 
     // Padding and appending length (this is done after processing the file)
-    size_t padded_len = ((total_bits + 9) / 512 + 1) * 64;
+    size_t padded_len = ((total_bits + 72) / 512 + 1) * 64;
+
     uint8_t padded[padded_len];
     memset(padded, 0, padded_len);
     
@@ -89,7 +90,7 @@ void sha256(const char *file_path, uint8_t hash[32]) {
     fseek(file, 0, SEEK_SET);  // Return to the start of the file
 
     // Padding and appending length (this is done after processing the file)
-    size_t padded_len = ((total_bits + 9) / 512 + 1) * 64;
+    size_t padded_len = ((total_bits + 72) / 512 + 1) * 64;
     uint8_t padded[padded_len];
     memset(padded, 0, padded_len);
     

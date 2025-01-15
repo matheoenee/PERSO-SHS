@@ -1,7 +1,7 @@
 #include "shs_crypto.h"
 
 int main() {
-    const char *file_path = "NIST.FIPS.180-4.pdf";  // Provide the path to the file
+    const char *file_path = "frog.jpeg";  // Provide the path to the file
     uint8_t sha256_hash[32];
     uint8_t sha1_hash[20];
 
